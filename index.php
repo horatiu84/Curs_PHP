@@ -68,6 +68,30 @@ echo"<br/>";
 	// **********************************************************************
 
 
+	// 	EXERCITIU 4 :
+
+// Scrieti un script care aduna toate numerele de la 0 la 30 si afisati rezultatul de forma:
+// '0 + 1 + 2 + ... + 30 = ...'
+
+echo "Exercitiu 4:"."<br/>";
+
+$num = 0;
+$sum = 0;
+$rez = 0;
+while($num < 30 ) {
+	$num++;
+	$sum = $sum + $num;
+	$rez = $rez." + ".$num;
+}
+
+echo $rez." = ".$sum."<br/>";
+
+echo"<br/>";
+
+
+// **********************************************************************
+
+
 
 // 	EXERCITIU 4 :
 
@@ -86,7 +110,6 @@ while($ani <= 5 ) {
 	echo "Suma totala din banca dupa anul ".$ani." este de ".$suma." euro"."<br/>"; 	
 	$ani++;
 }
-
 
  ?>
 
