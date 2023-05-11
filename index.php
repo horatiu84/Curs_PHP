@@ -93,20 +93,20 @@ echo"<br/>";
 
 
 
-// 	EXERCITIU 4 :
+// 	EXERCITIU 5 :
 
 // Un client al unei banci depune initial la banca suma de 500euro cu o dobanda de 10% pe an.
 // Sa se afiseze soldul per fiecare an, daca lasa banii la banca in 5 ani.
 
 
-echo "Exercitiu 4:"."<br/>";
+echo "Exercitiu 5:"."<br/>";
 
 $ani = 1;
 $suma = 500;
 
 while($ani <= 5 ) {
 
-	$suma =(int) ($suma + ($suma/10));
+	$suma =$suma + ($suma/10);
 	echo "Suma totala din banca dupa anul ".$ani." este de ".$suma." euro"."<br/>"; 	
 	$ani++;
 }
