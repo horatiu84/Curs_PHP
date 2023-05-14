@@ -4,15 +4,15 @@
         echo "</br>";
         echo 'Rezultatul este :' . (8 + ((4 + 5) - (3 + 4))); // 10
         echo "</br>";
-        echo 'Rezultatul este :' . 2 * (3 + 5); // 16
+        echo 'Rezultatul este :' . 4 * (2 + 3); // 20
         echo "</br>";
-        echo 'Rezultatul este :' . (2 * 3) + 5; // 11
+        echo 'Rezultatul este :' . (5 * 3) + (4*3); // 27
         echo "</br>";
-        echo 'Rezultatul este :' . pow(2,3); // 8 => 2x2x2 = 8
+        echo 'Rezultatul este :' . pow(3,2); // 9 => 3x3 = 9
         echo "</br>";
-        echo 'Rezultatul este :' . 2 * pow(2,3) + 2;  // 18 => (2 x 8) + 2 => 16 + 2 => 18
+        echo 'Rezultatul este :' . 5 * pow(2,3) + 6;  // 18 => (5 x 8) + 6 => 40 + 6 => 46
         echo "</br>";
-        echo 'Rezultatul este :' . ((10 * 2) +  (2 % 3)); // 21 => 10 x 2 => 20 rest 1 ( din 2 modulo 3 ) => 20 + 1 = 21
+        echo 'Rezultatul este :' . ((6 * 3) +  (7 % 5)); // 20 => 18 + 2 => 18 rest 2 ( din 7 modulo 5 ) => 18 + 2 = 20
         echo "</br>";
         echo 'Rezultatul este :' . number_format((10 * pow(2,3) + pow(2,3) + (3 + 2 )));
 
@@ -26,12 +26,12 @@
           */
         echo  "</br>";
 
-        echo  'Rezultatul este : ' . number_format(4.10);
+        echo  'Rezultatul este : ' . number_format(7.40);
         /*  Pentru a elimna virgula adaugam number_format
 
-        Rezultatul este 4 => se va elimina virgula de dupa el adica ( punctul ala e considerat virgula => sau float
+        Rezultatul este 7 => se va elimina virgula de dupa el adica ( punctul ala e considerat virgula => sau float
 
-        automat .10 nu va mai aparea, incercati si voi
+        automat .40 nu va mai aparea, incercati si voi
 
         */
         echo  "</br>";
@@ -42,11 +42,11 @@
 
         // 1 . Adaugand o variabila
 
-        $name = "Cecilia";
+        $name = "Horatiu";
         echo $name; // afisam Cecilia => Putem folosi atat ghilimele duble cat si simple, dar nu COMBINATE!, ca produce o eroare fatala
         echo  "</br>";
         // 2. Adaugand 2 variabile si folosind simbolul .= ( punct si egal )
-        $name_1 = "Cecilia";
+        $name_1 = "Horatiu";
         $name_2 = "Salut! ";
 
       echo  $name_2 .= $name_1;  // va afisa Salut Cecilia
@@ -54,7 +54,7 @@
         // 2 Varianta 2 de la aceasta metoda utilizand doar . ( simbolul unirii )
         echo  "</br>";
         $n = "Salut!";
-        $b = "Cecilia";
+        $b = "Horatiu";
 
         echo $n . " " . $b;
         echo  "</br>";
@@ -62,15 +62,18 @@
         // Utilizarea Heredoc
 
 echo <<< TEXT
-Utilizand aceasta metoda putem afisa un string adica prin Heredoc  \r\n
+Utilizand aceasta metoda putem afisa un string adica prin Heredoc si se pot adauga variabile \r\n
+de exemplu : $b  
 TEXT;
             // nu trebuie sa existe spatiiiiiiiiiii !!!!!!  :) :)
 
 // Newdoc
 
 echo  "</br>";
+echo  "</br>";
 echo <<< 'HORATIU'
-Textul la Newdoc, diferenta dintre acestea este ca la Heredoc nu se folosesc ghilimele, dar la Newdoc se folosesc
+Textul la Newdoc, diferenta dintre acestea este ca la Heredoc nu se folosesc ghilimele, dar la Newdoc se folosesc si de asemenea nu se pot 
+folosi direct variabile in acest tip de metoda
 HORATIU;
 
 echo  "</br>";
@@ -78,7 +81,7 @@ echo  "</br>";
 
         $member = [
             'id'=> 1,
-            'name'=>'Cristian',
+            'name'=>'Horatiu',
             'country'=>'Romania',
 
         ];
@@ -98,22 +101,22 @@ echo  "</br>";
 
         // lista de cumparaturi
         echo  "</br>";
-        $list = ['Paine','Oua','Lapte','Faina']; // 3 elemente in lista !! ( totul incepe de la 1 nu de la 1 )
+        $list = ['Orez','Ceapa','Branza','Iaurt']; // 3 elemente in lista !! ( totul incepe de la 0 nu de la 1 )
 
-        echo $list[0]; // 0 este numar de index, adica totul incepe de la 0, nu de la 1 => "Painea" are nr 0, nu 1
+        echo $list[0]; // 0 este numar de index, adica totul incepe de la 0, nu de la 1 => "Orez" are nr 0, nu 1
         echo  "</br>";
         echo "<pre>"; // am afisat mai frumos
-        var_dump($list); // am afisat cu var_dump => keya si valoarea
+        var_dump($list); // am afisat cu var_dump => key si valoarea
 
     // Array in array
         echo  "</br>";
     $lista_masini = array(
-    array('Model' => 'BMW', 'TOYOTA'),
-    array('Model' => 'Altu', 'aLTU'),
-    array('Model' => 'BMW', 'ford', 'sub_array' => array('roti' => 4), 'sub_sub_array' => array('usi' => 5))
+    array('Model' => 'AUDI', 'HONDA'),
+    array('Model' => 'DACIA', 'LADA'),
+    array('Model' => 'MERCEDES', 'RENAULT', 'sub_array' => array('roti' => 4), 'sub_sub_array' => array('usi' => 4))
 );
 
-echo $lista_masini[0]['Model']; // afiseaza BMW din primul sub-tablou (sub-array)
+echo $lista_masini[0]['Model']; // afiseaza AUDI din primul sub-tablou (sub-array)
 echo "<br>";
 echo $lista_masini[2]['sub_array']['roti']; // afiseaza 4 din sub-tabloul (sub-array) al treilea element al matricii principale
 echo "<br>";
@@ -121,10 +124,10 @@ echo "<br>";
 
     // Actualizarea unui array + adaugare unei noi valori
 
-    $famili = array('Mama','Tata');
-    echo $famili[0]; // afisam Mama
-    echo $famili[0] = "Sora"; // actualizam Mama cu Sora
-    echo $famili[2] = "Sora 2";
+    $famili = array('Matusa','Unchi');
+    echo $famili[0]; // afisam Matusa
+    echo $famili[0] = "Verisoara"; // actualizam Matusa cu Verisoara
+    $famili[2] = "Verisor"; // pare ca merge si fara a utiliza echo 
         echo "<pre>";
         var_dump($famili);
 
