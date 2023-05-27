@@ -1,0 +1,72 @@
+Test PHP 
+Raspundeti la intrebari.
+
+1.Cum fac un fisier PHP?
+//Fisierul trebuie sa aiba extensia .php. In interiorul fisierului se vor pune tagurile "<?php" si "?>" pentru un script php.
+
+2.Ce este o variabila?
+// O variabila este o modalitate de a stoca date intr-un program. Personal o aseaman cu o cutie :)
+
+3.Cum adaug comentarii si care sunt modurile prin care pot adauga?
+// Cele mai utilizate moduri de adaugare a comentarilor in php sunt :  // - pt a comenta o linie sau /* .... */ pentru mai multe linii.
+ 
+4.Ce reprezinta simbolul ( . ) ? si la ce ne ajuta? 
+Cu ajutorul acestui simbol putem concatena mai multe stringuri. Ex: echo "hello "." world"; // hello world
+ 
+5.Dupa terminarea unei linii de cod ce se pune ? 
+// Se pune mereu ; 
+
+6.Ce este ghilimeaua dubla si la ce ne ajuta? dar simpla? care este diferenta?
+// Ambele sunt folosite pentru a scrie o insiruire de caractere (string). Diferenta este ca in interiorul ghilimelelor duble putem pune variabile
+care vor fi recunoscute, dar in cele simple nu putem face asta. Deasemenea cele simple se executa mai rapid. 
+7.Ce afiseaza urmatorul exercitiu : 
+
+$a = 20;
+$b = 10;
+echo print($a)+10;
+echo "</br>";
+echo print($b) + print($a) + 10;
+
+//301
+//30111
+
+8.Ce afiseaza echo ? 
+// in prima linie afiseaza 301 ( este rezultatul adunarii variabilei $a cu 10 (30), la care se concateneaza 1 ( pt ca print o sa returneze mereu 1)
+9.Ce afiseaza print ?  de da rezultatul respectiv? 
+// print este o functie care retunreaza 1, din aceasta cauza la printare rezultatele pot parea putin "ciudate" 
+
+10.Ce este un array indexat, multidimensional dar asociativ?
+// un array indexat este un array care nu are specificate cheile. 
+	ex: $arr = [1,2,3,40];
+// un array multidimensional este un array care are mai multe "nivele" ( un alt array in interiorul lui de ex)
+	ex:  $arr = [1,2,3,[10,20,30,40] ];
+// un array asociativ este un array care are specificate cheile (key => value)
+	ex: $arr = [ 'Nume' => 'Ionescu' , 'Prenume' = 'Vasile']
+			
+11. Am array de mai jos, cum adaug o noua vloare?
+
+	$lista = array(	"paine" , "lapte" , "oua"	);
+
+	$lista[] = "ciocolata" 
+
+	Vreau o noua valoare dupa oua, si anume ciocolata, doresc raspunsul doar, utilizand variabila de la array 
+12. Exercitiu : 
+
+	$a = 10;
+	$b = 30;
+	
+	echo pow($a,2) + pow($b,2); // ce o sa afiseze si de ce raspunsul x? 
+	// 10 la puterea 2 + 30 la puterea 2 = 100 + 900 = 1000
+	echo ((10+2) / 2 + (3 * 10 ) / 0) * 0 ) // ce o sa afiseze? si cu ce incepem prima oara cand avem o astfel de ecuatie?
+	
+13. Ce este un float? // un numar cu zecimale
+14, Ce este un int? // un numar intreg
+15. Ce functie folosim pentru rontunjirea numarului 2.6 la 3? // ceil()
+16. Ce functie folosim pentru verificarea numarului de caractere dintr-un sir? strleng( )
+17. Ce face isset? // verifica daca o variabila a fost setata(daca exista)
+18. Ce face empty? // verifica daca o variabila este egala cu 0, este goala sau nu a fost setata.
+19. Ce inseamna semnul < ? dar > ? compara doua valori : < - mai mic, > - mai mare.
+20. Ce inseamna != ? dar !== ,? dar === , == ? dar si <=>  ? :)
+//!= - verifica daca doua valori nu sunt egale ( doar valoarea fara a verifica si tipul de date)
+  !== - verifica daca atat valoarea cat si tipul de date este identic. Ex: -5 !== "-5" o sa fie adevarat ( deoarece nu sunt egale)
+<=> - denumit si nava spatiala : va returna -1 pt < , 0 pt egalitate si 1 pt mai mare
